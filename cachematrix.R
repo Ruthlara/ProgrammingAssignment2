@@ -1,4 +1,4 @@
-# that contains 4 member functions: set, get, setInv
+# contains 4 member functions: set, get, setInv
 # this function works like a class, it creates a list
 
 makeCacheMatrix <- function(x = matrix()) {
