@@ -1,13 +1,13 @@
-# contains 4 member functions: set, get, setInv
+# we create the function makecachematrix 
 # this function works like a class, it creates a list
 
 makeCacheMatrix <- function(x = matrix()) {
       xinv <- NULL # this is where the result of inversion is stored
             set <- function(y) {
 	  x <<- y
-	  xinv <<- NULL # it also initialises xinv to null
+	  xinv <<- NULL 
       }
-      get <- function() x # return the input matrix
+      get <- function() 
       setInv <- function(inv) xinv <<- inv # set the inversed matrix
       getInv <- function() xinv # return the inversed matrix
       # return a list that contains these functions, so that we can use
@@ -21,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	  message("getting cached data")
 	  return(m) # return the calculated inversion
       }
-      data <- x$get() # if not, we do x$get to get the matrix object
+      data <- x$get() 
       m <- solve(data) # we solve it
       x$setInv(m) # then set it to the object
       m # return the solved result
